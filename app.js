@@ -2,15 +2,12 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Set up your routes here
-
-// Serve static files from the "public" directory
 app.use(express.static('public'));
 
-// Set your view engine to use EJS
+
 app.set('view engine', 'ejs');
 
-// Define routes for your portfolio pages
+
 app.get('/', (req, res) => {
     res.render('home', { title: 'Home' });
 });
@@ -20,7 +17,7 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/projects', (req, res) => {
-    // Create an array of sample projects
+
     const projects = [
         {
             title: 'Project 1',
